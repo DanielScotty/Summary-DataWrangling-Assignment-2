@@ -296,10 +296,10 @@ def project_record(record: List[float], R_mean: List[float],
 def main():
     sys.argv = [
         "PCA_CD.py",
-        r"C:\Users\Daniel\OneDrive\Documenten\UU\Data_Wrangling\Assignments\Assignment 2\generated_streams",       # data_file
+        os.path.join(os.getcwd(), "generated_streams"),       # data_file
         "10000",            # window_size
         "500",            # threshold_factor
-        r"C:\Users\Daniel\OneDrive\Documenten\UU\Data_Wrangling\Assignments\Assignment 2\changes.txt",    # output_change_file
+        os.path.join(os.getcwd(), "changes.txt"),    # output_change_file
         "2",              # data_dimension
         "0.005",          # delta
         "1",              # divergence_metric
